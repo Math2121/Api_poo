@@ -1,0 +1,30 @@
+
+
+* Criação de migration na pasta migration -> Tabela com respectivas colunas:(
+    yarn typeorm migration:create -n createNomeDaMigration
+)   
+* Criação da tabela no BD, execuão da migration:(
+    yarn typeorm migration:run
+)
+
+-- MVC -- 
+M - MODEL - (ENTITIES)
+C - CONTROLLER ()
+V - VIEW
+
+REQUISIÇÃO - (POST, GET, PUT, DELETE)
+enviar um post JSON (name, telephone, email)
+rota /clients
+
+rota post(/clients) -> controller (ClientsController)
+Controller (pegar os dados ) e chama um Services (ClientServices)
+Services é que contém a regra negócio da aplicação, é ele
+que irá se comunicar com o banco de dados
+
+Fluxo: routes --> controller --> services (regra de negocio) 
+
+routes.post    -> create() { } - Cadastrar usuário
+routes.get     -> index() { }  - Listagem de usuários 
+routes.get     -> show() { }   - Exibir um único usuário
+routes.put     -> update() { } - Alterar usuário
+routes.delete  -> delete() { } - Remover usuário
