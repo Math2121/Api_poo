@@ -22,7 +22,7 @@ export class PurchaseOrder {
   product_id: string;
 
   @JoinColumn({ name: 'provider_id'})
-  @ManyToOne(() => Product)
+  @ManyToOne(() => Provider)
   provider: Provider;
 
   @Column()
